@@ -1,0 +1,721 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Estilo para a Navbar */
+.navbar-custom {
+  background-color: #1e6190;
+  padding: 10px 20px;
+  border-bottom: 3px solid 1e6190;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Seção Hero com imagem de fundo */
+.hero-section {
+  background: url("assets/escritorio.jpeg") no-repeat center center;
+  background-size: cover;
+  padding: 100px 0 50px 0; /* Adiciona padding extra na parte inferior para as info-boxes */
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  background-color: #00a4ef;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+  background-color: #008ccc;
+}
+/* Ajustes no botão "Solicitar Demonstração" */
+.hero-section .btn-primary {
+  background-color: #00a4ef;
+  border-color: #00a4ef;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #008ccc;
+  border-color: #008ccc;
+}
+
+/* Estilização do modal */
+.modal-header {
+  background-color: #fff;
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+}
+
+
+/* Animação de fade-in nas colunas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa levemente deslocado para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.info-col {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards; /* Animação com duração de 1.2 segundos */
+}
+
+/* Para atrasar a animação das colunas sucessivas */
+.info-col:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.info-col:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.info-col:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.info-col:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+/* Seção das Info-boxes */
+.info-box {
+  background-color: rgba(0, 0, 0, 0.5); /* Caixa semi-transparente */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito de hover nas info-boxes */
+.info-box:hover {
+  transform: translateY(-10px); /* Move levemente para cima */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+.info-box h3 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.info-box p {
+  font-size: 18px;
+}
+
+/* Layout da seção principal */
+.main-section {
+  padding: 50px 0;
+}
+
+/* Estilização do Left Panel */
+.left-panel {
+  background-color: #f5f7f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Animação e transição nos itens ao passar o mouse */
+.left-panel .feature-item {
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição */
+}
+
+/* Efeito ao passar o mouse sobre o item */
+.left-panel .feature-item:hover {
+  transform: translateY(-5px); /* Move levemente para cima */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+.left-panel .feature-item i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Estilo da área de conteúdo principal */
+.content-area {
+  text-align: center;
+}
+
+/* Estilo da área de conteúdo principal */
+.content-area img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Espaçamento entre a imagem e os benefícios */
+}
+/* Estilo da seção de benefícios */
+.benefits-section {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f5f7f9;
+  border-radius: 8px;
+}
+
+.benefits-section h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.benefits-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.benefits-section ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.benefits-section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+/* Estilo geral da seção */
+.control-section {
+  background-color: #3b77a9; /* Cor de fundo azul */
+  padding: 50px 0;
+  color: white;
+}
+
+/* Estilização do texto e alinhamento */
+.control-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.control-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Destaque para os níveis */
+.control-section .level-title {
+  color: #ffd700; /* Cor amarela para destaque */
+  font-weight: bold;
+}
+
+/* Ícones */
+.control-section i {
+  font-size: 32px;
+  color: #ffd700; /* Ícone na cor amarela */
+  margin-right: 15px;
+}
+
+/* Estilo da imagem de pessoas */
+.control-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo das colunas */
+.control-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-column {
+  padding-left: 30px;
+}
+/* Estilização geral da seção */
+.atendimento-section {
+  background-color: white; /* Cor de fundo semelhante ao azul claro */
+  padding: 50px 0;
+  text-align: center;
+}
+
+.atendimento-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.atendimento-section p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Estilo dos cards */
+.atendimento-card {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  height: 400px; /* Defina a altura fixa desejada */
+  display: flex;
+  flex-direction: column; /* Para alinhar o conteúdo verticalmente */
+  justify-content: space-between; /* Para distribuir o espaço dentro do card */
+}
+
+
+.atendimento-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.atendimento-card h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.atendimento-card p {
+  font-size: 16px;
+  color: #000;
+}
+/* Define o comportamento flexbox para as colunas */
+.row.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Garante que os itens não quebrem de linha */
+}
+
+/* Força a largura da terceira coluna a se comportar como col-lg-5 */
+.col-lg-2 {
+  flex: 1 1 30%; /* Faz a coluna crescer para 30% da largura */
+}
+
+/* As outras colunas também podem ser ajustadas */
+.col-lg-5 {
+  flex: 1 1 35%; /* Define um tamanho flexível para colunas maiores */
+}
+
+/* Força a imagem no modal a ocupar toda a largura do modal */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* Garante que a imagem mantenha sua proporção */
+}
+
+/* Ajusta a largura do col-lg-2 dentro do modal */
+@media (min-width: 992px) {
+  .col-lg-2 img {
+    width: 100%; /* Faz a imagem ocupar a largura completa no modal */
+  }
+}
+
+/* Animação de fade-in nas colunas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa levemente deslocado para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.atendimento-col {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards; /* Animação com duração de 1.2 segundos */
+}
+
+/* Para atrasar a animação das colunas sucessivas */
+.atendimento-col:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.atendimento-col:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.atendimento-col:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Animação de hover para os cartões */
+.atendimento-card {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+.atendimento-card:hover {
+  transform: translateY(-10px); /* Move o cartão levemente para cima */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+
+/* Botão de ação */
+.action-button {
+  background-color: #000;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.action-button:hover {
+  background-color: #333;
+}
+/* Animação de fade-in nas colunas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px); /* Começa levemente deslocado para baixo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+.testimonial-col {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards; /* Animação com duração de 1.2 segundos */
+}
+
+/* Para atrasar a animação das colunas sucessivas */
+.testimonial-col:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.testimonial-col:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.testimonial-col:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Seção de depoimentos */
+.testimonials-section {
+  background-color: #3b77a9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Estilo dos cards */
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transição suave */
+}
+
+/* Cards azuis */
+.testimonial-card.blue-card {
+  background-color: #004a78;
+  color: #fff;
+}
+.testimonial-card.blue-card P {
+  color: #fff;
+}
+
+/* Estrelas de avaliação */
+.testimonial-card .stars {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+/* Nome e posição */
+.testimonial-card .client-name {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.testimonial-card .client-role {
+  font-size: 14px;
+  color: #999;
+}
+
+/* Efeito ao passar o mouse nos cards */
+.testimonial-card:hover {
+  transform: translateY(-10px); /* Move levemente para cima */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra */
+}
+
+
+/* Espaçamento adequado em dispositivos móveis */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-content .btn {
+    font-size: 16px;
+  }
+
+  .info-box h3 {
+    font-size: 24px;
+  }
+
+  .info-box p {
+    font-size: 16px;
+  }
+
+  .info-box {
+    margin-top: 10px;
+  }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .atendimento-card h4 {
+    font-size: 18px;
+  }
+
+  .atendimento-card p {
+    font-size: 14px;
+  }
+
+  .action-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+.quer-saber-mais-section {
+  background-color: white; /* Cor de fundo clara */
+  padding: 50px 0;
+  margin-top: 40px; /* Espaço acima da seção */
+}
+.quer-saber-mais-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Cor preta com 50% de opacidade */
+  z-index: 1;
+}
+.quer-saber-mais-section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quer-saber-mais-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.quer-saber-mais-section .btn {
+  background-color: #007bff; /* Cor do botão */
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.quer-saber-mais-section .btn:hover {
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+ /* Estilo geral do footer */
+ footer {
+  background-color: #00334E;
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer a {
+  color: #76A4D9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo geral do footer */
+footer {
+  background-color: #00334E;
+  color: #fff;
+  padding: 60px 0; /* Aumentei o padding para mais espaçamento */
+}
+
+footer a {
+  color: #76A4D9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Seção da logo */
+.footer-logo img {
+  width: 150px; /* Aumentei o tamanho da logo */
+  margin-bottom: 20px;
+}
+
+/* Redes sociais */
+.footer-social-icons a {
+  margin: 0 10px; /* Espaçamento entre os ícones */
+  font-size: 30px; /* Aumentei o tamanho dos ícones */
+  color: #fff;
+}
+
+.footer-social-icons a:hover {
+  color: #76A4D9;
+}
+.col-md-3 {
+  text-align: center; /* Centraliza o texto dentro da coluna */
+}
+
+.footer-contact {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o preenchimento padrão */
+}
+
+.footer-contact li {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+  display: flex; /* Para alinhar ícones e texto */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+.footer-contact li i {
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+  color: #76A4D9; /* Cor do ícone */
+}
+
+
+/* Botão de ação */
+.action-button {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #76A4D9;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #76A4D9;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #76A4D9;
+  color: white;
+}
+
+/* Seção de direitos reservados */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-social-icons {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .action-button {
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+    padding: 10px 0;
+  }
+}
+
+
+.action-button {
+  border: 1px solid #76A4D9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #76A4D9;
+  text-decoration: none;
+}
+
+.action-button:hover {
+  background-color: #76A4D9;
+  color: white;
+}

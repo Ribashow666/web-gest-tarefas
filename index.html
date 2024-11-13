@@ -4,352 +4,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ribashow666</title>
+  <meta name="description" content="ribashow - Tecnologia e Inovação">
+  <title>ribashow</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="button.css">
 </head>
-
 <body>
-  <!-- Navbar Fixa -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="assets/mrbeast.png" alt="Logo"> <!-- Substitua pelo seu logo -->
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#hero-section">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#main-section">Benefícios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#control-section">Controle</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonials-section">Depoimentos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#footer-container">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- JavaScript para controlar o comportamento do navbar -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        // Fecha o navbar ao clicar em qualquer link
-        document.querySelectorAll('.nav-link').forEach(link => {
-          link.addEventListener('click', function () {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse.classList.contains('show')) {
-              const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                toggle: false
-              });
-              bsCollapse.hide();  // Fecha o menu colapsado
-            }
-          });
-        });
-
-        // Verifica o estado do toggle ao clicar no botão
-        document.querySelector('.navbar-toggler').addEventListener('click', function () {
-          const navbarCollapse = document.querySelector('.navbar-collapse');
-          if (navbarCollapse.classList.contains('show')) {
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-              toggle: false
-            });
-            bsCollapse.hide();  // Fecha o menu colapsado
-          }
-        });
-      });
-    </script>
-  </nav>
-
-  <!-- Seção principal com imagem de fundo -->
-  <section class="hero-section" id="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <h1>O sistema de gerenciamento de tarefas mais custo-benefício do mercado.</h1>
-        <p>Automação, controle, atendimento e estratégia. O sistema oferece alta precisão e desempenho para otimizar a
-          gestão de tarefas do seu escritório.</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#solicitarDemoModal">
-          Solicitar demonstração
+        <a class="navbar-brand" href="#"> 
+            <img src="assets/teste-logo_sem_fundo_inv.webp" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a meta="home" alt="Home" class="nav-link" href="#hero-section">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a meta="beneficios" alt="Benefícios" class="nav-link" href="#main-section">BENEFÍCIOS</a>
+            </li>
+            <li class="nav-item">
+                <a meta="controle" alt="Controle" class="nav-link" href="#control-section">CONTROLE</a>
+            </li>
+            <li class="nav-item">
+                <a meta="app" alt="App" class="nav-link" href="#atendimento">APLICATIVO</a>
+            </li>
+            <li class="nav-item">
+                <a meta="como-atuamos" alt="Como Atuamos" class="nav-link" href="#atuamos">COMO ATUAMOS</a>
+            </li>
+            <li class="nav-item">
+                <a meta="depoimentos" alt="Depoimentos" class="nav-link" href="#testimonials">DEPOIMENTOS</a>
+            </li>
+            <li class="nav-item">
+                <a meta="contato" alt="Contato" class="nav-link" href="#footer-container">CONTATO</a>
+            </li>
+        </ul>
+        
+        </div>
+    </div>
+</nav>
+
+  <section class="hero-section" id="hero-section" style="background-image: url('assets/escritorio.webp');">
+    <div class="container">
+        <div class="hero-content">
+            <h1>O mais recente software de <span class="highlight">administração de atividades</span> disponível no mercado.</h1>
+            <p>Automatização, supervisão, suporte e planejamento. O software proporciona elevada exatidão e eficiência para aprimorar a administração das atividades do seu escritório.</p>
+            <button type="button" class="custom-btn btn-3" alt="WhatsApp" onclick="window.open('https://wa.me/558137710742', '_blank')">
+              <span>Solicitar demonstração</span>
+          </button>
+        </div>
     </div>
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <h3>2.000</h3>
-            <p>Clientes Atendidos</p>
-          </div>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="info-box">
+                    <h3 id="clientsProcessed">2.000</h3>
+                    <p>Clientes Processados</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="info-box">
+                    <h3 id="tasksCompleted">2.000.000</h3>
+                    <p>Tarefas Concluídas</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="info-box">
+                    <h3 id="improvementsYearly">350</h3>
+                    <p>Melhorias ao ano</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="info-box">
+                    <h3 id="automatedTasks">+500</h3>
+                    <p>Tarefas Automatizadas</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <h3>20 milhões</h3>
-            <p>Tarefas Concluídas</p>
+    </div>
+</section>
+
+<section class="main-section" id="main-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 fade-in-left">
+        <div class="left-panel">
+          <img src="assets/logo_sem_fundo.webp" alt="Logo ribashow" style="max-width: 200px; margin-bottom: 20px;">
+          <div class="feature-item" data-toggle="collapse" data-target="#item1" data-img="assets/screen.webp"> 
+            <i class="bi bi-check-circle"></i>
+            <div>
+              <strong>Download de Atividades em Grupo</strong><br>
+              <div id="item1" class="collapse">
+                Acabe com a duplicação indesejada! Aperfeiçoamos o procedimento.
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <h3>350</h3>
-            <p>Melhorias ao ano</p>
+          <div class="feature-item" data-toggle="collapse" data-target="#item2" data-img="assets/2.webp"> 
+            <i class="bi bi-file-earmark-check"></i>
+            <div>
+              <strong>Verificação de Documentos</strong><br>
+              <div id="item2" class="collapse">
+                Confirme se o documento foi recebido de forma adequada.
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="info-box">
-            <h3>150 mil</h3>
-            <p>Empresas cadastradas</p>
+          <div class="feature-item" data-toggle="collapse" data-target="#item3" data-img="assets/3.webp"> 
+            <i class="bi bi-receipt"></i>
+            <div>
+              <strong>Comprovante de Inicialização de Documento</strong><br>
+              <div id="item3" class="collapse">
+                Obtenha o comprovante de inicialização do documento.
+              </div>
+            </div>
+          </div>
+          <div class="feature-item" data-toggle="collapse" data-target="#item4" data-img="assets/escritorio.webp"> 
+            <i class="bi bi-alarm"></i>
+            <div>
+              <strong>Notificação de Deadlines</strong><br>
+              <div id="item4" class="collapse">
+                Obtenha notificações quando o deadline for atingido.
+              </div>
+            </div>
+          </div>
+          <div class="feature-item" data-toggle="collapse" data-target="#item5" data-img="assets/sc2.webp"> 
+            <i class="bi bi-calendar-check"></i>
+            <div>
+              <strong>Dashboard de atividades com prazo para o dia</strong><br>
+              <div id="item5" class="collapse">
+                Confira as atividades com prazo para hoje.
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Modal para Solicitar Demonstração -->
-  <div class="modal fade" id="solicitarDemoModal" tabindex="-1" aria-labelledby="solicitarDemoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="solicitarDemoLabel">Solicitar Demonstração</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- Formulário de contato -->
-          <form id="solicitarDemoForm">
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content modal-custom">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+            <div class="modal-body">
+              <img id="modalImage" src="" class="img-fluid" alt="Tela Ampliada">
             </div>
-            <div class="mb-3">
-              <label for="mensagem" class="form-label">Mensagem</label>
-              <textarea class="form-control" id="mensagem" rows="3" placeholder="Escreva sua mensagem"
-                required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
-          <!-- Mensagem de sucesso -->
-          <div id="successMessage" class="alert alert-success mt-3" style="display:none;">
-            Obrigado! Sua solicitação foi enviada com sucesso.
           </div>
         </div>
+      </div>
+
+      <div class="col-md-8 content-area fade-in-right">
+        <img src="assets/screen.webp" alt="Tela Principal" id="mainImage" class="clickable-image" data-bs-toggle="modal" data-bs-target="#imageModal">
+        
+        <!-- <div class="benefits-section fade-in-right">
+          <h4>Outros Benefícios:</h4>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Formato PDF</li>
+            <li><i class="bi bi-check-circle"></i> Pesquisa</li>
+            <li><i class="bi bi-check-circle"></i> Fluxo Hierárquico</li>
+            <li><i class="bi bi-check-circle"></i> Processo Sequencial</li>
+            <li><i class="bi bi-check-circle"></i> Implementação Eficiente e Rápida</li>
+            <li><i class="bi bi-check-circle"></i> Totalmente Online</li>
+            <li><i class="bi bi-check-circle"></i> Perspectiva do Cliente</li>
+        </ul>
+        
+        </div> -->
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Simulação de envio do formulário -->
-  <script>
-    document.getElementById('solicitarDemoForm').addEventListener('submit', function (event) {
-      event.preventDefault();  // Impede o envio real do formulário
-
-      // Pegando os valores dos campos
-      const nome = document.getElementById('nome').value;
-      const email = document.getElementById('email').value;
-      const mensagem = document.getElementById('mensagem').value;
-
-      // Enviar os dados via fetch para o backend
-      fetch('http://127.0.0.1:3000/api/solicitar-demonstracao', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          nome: nome,
-          email: email,
-          mensagem: mensagem
-        })
-      })
-        .then(response => {
-          if (response.ok) {
-            // Mostrar a mensagem de sucesso no modal
-            document.getElementById('successMessage').style.display = 'block';
-
-            // Esconder o formulário após o envio
-            document.getElementById('solicitarDemoForm').style.display = 'none';
-
-            // Limpar o formulário
-            document.getElementById('solicitarDemoForm').reset();
-
-            // Após 2 segundos, fechar o modal automaticamente
-            setTimeout(() => {
-              var modalEl = document.querySelector('#solicitarDemoModal');
-              var modal = bootstrap.Modal.getInstance(modalEl);
-              modal.hide();
-
-              // Remover backdrop manualmente (corrigir problema de tela escura)
-              document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
-
-              // Resetar o estado do modal para exibir o formulário novamente na próxima vez
-              document.getElementById('solicitarDemoForm').style.display = 'block';
-              document.getElementById('successMessage').style.display = 'none';
-            }, 2000);
-          } else {
-            alert('Ocorreu um erro. Por favor, tente novamente.');
-          }
-        })
-        .catch(error => {
-          console.error('Erro ao enviar o formulário:', error);
-          alert('Ocorreu um erro. Por favor, tente novamente.');
-        });
-    });
-
-  </script>
-
-  <!-- Seção Principal -->
-  <section class="main-section" id="main-section">
-    <div class="container">
-      <div class="row">
-        <!-- Painel à esquerda com as funcionalidades -->
-        <div class="col-md-4">
-          <div class="left-panel">
-            <img src="assets/mrbeast.png" alt="Logo" style="max-width: 200px; margin-bottom: 20px;">
-            <!-- Adicionando ícones ao lado dos textos -->
-            <div class="feature-item">
-              <i class="bi bi-check-circle"></i>
-              <div>
-                <strong>Baixa de Tarefas em Lote</strong><br>
-                Chega de repetição desnecessária! Otimizamos o processo.
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-file-earmark-check"></i>
-              <div>
-                <strong>Validação de Arquivo</strong>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-envelope"></i>
-              <div>
-                <strong>Reenvio de E-mail</strong>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-receipt"></i>
-              <div>
-                <strong>Recibo de abertura de Arquivo</strong>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-alarm"></i>
-              <div>
-                <strong>Alerta dos prazos</strong>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-envelope-check"></i>
-              <div>
-                <strong>Recebimento automático de e-mails</strong>
-              </div>
-            </div>
-            <div class="feature-item">
-              <i class="bi bi-calendar-check"></i>
-              <div>
-                <strong>Painel de tarefas que vencem no dia</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Modal para exibir a imagem em tela grande -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered"> <!-- modal-xl para modal extra grande -->
-            <div class="modal-content modal-custom"> <!-- Adicionada classe personalizada para controle de tamanho -->
-              <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <img id="modalImage" src="" class="img-fluid" alt="Tela Ampliada">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Área de Conteúdo Principal -->
-        <div class="col-md-8 content-area">
-          <img src="assets/8bpaj8hw7t361.png" alt="Tela Principal" class="clickable-image"
-            data-bs-toggle="modal" data-bs-target="#imageModal">
-          <!-- Seção de Benefícios logo abaixo da imagem -->
-          <div class="benefits-section">
-            <h4>Outros Benefícios:</h4>
-            <ul>
-              <li>PDF Layout</li>
-              <li>Enquete</li>
-              <li>Fluxo cascata</li>
-              <li>WhatsApp integrado</li>
-              <li>Implantação prática e rápida</li>
-              <li>Sem fidelidade</li>
-              <li>100% online</li>
-              <li>Visão do cliente</li>
-            </ul>
-          </div>
-        </div>
+</section>
 
 
-        <script>
-          // Quando uma imagem com a classe 'clickable-image' for clicada
-          document.querySelectorAll('.clickable-image').forEach(image => {
-            image.addEventListener('click', function () {
-              // Obtém o caminho da imagem clicada
-              const src = this.src;
-              // Define o caminho da imagem no modal
-              document.getElementById('modalImage').src = src;
-            });
-          });
-        </script>
 
-  </section>
-
-
-  <!-- Seção de Controle de Níveis -->
   <section class="control-section" id="control-section">
     <div class="container">
       <div class="row">
-        <!-- Coluna da Imagem -->
-        <div class="col-md-6 control-column">
-          <img src="assets/pessoas.jpeg" alt="Pessoas" class="control-image">
+        <div class="col-md-6 control-column fade-in-left">
+          <img src="assets/people.webp" alt="Pessoas" class="control-image">
         </div>
-        <!-- Coluna de Texto -->
-        <div class="col-md-6 text-column">
-          <h3>Nosso sistema para contabilidade oferece <strong>três diferentes níveis de controle</strong> para uma
-            gestão muito mais assertiva:</h3>
-          <!-- Nível Administrador -->
+        <div class="col-md-6 text-column fade-in-right">
+          <h3>Nosso software para administração de tarefas proporciona <span class="highlight2">três distintos níveis de supervisão</span> para uma
+            gestão muito mais precisa:</h3>
           <div class="d-flex align-items-start mb-4">
-            <i class="bi bi-people-fill"></i> <!-- Ícone -->
+            <i class="bi bi-people-fill"></i> 
             <div>
               <p class="level-title">Administrador</p>
-              <p>Controle macro de todos os departamentos e colaboradores para uma gestão mais efetiva e focada em
+              <p class="level-description">Supervisão abrangente de todos os setores e funcionários para uma administração mais eficaz e direcionada a
                 resultados.</p>
             </div>
           </div>
-          <!-- Nível Gerente -->
           <div class="d-flex align-items-start mb-4">
-            <i class="bi bi-person-badge-fill"></i> <!-- Ícone -->
+            <i class="bi bi-person-badge-fill"></i> 
             <div>
               <p class="level-title">Gerente</p>
-              <p>Distribuição e aprovação de tarefas, avaliação de performance e controle de prazos. Autonomia total do
-                que acontece no departamento.</p>
+              <p class="level-description">Distribuição e aprovação de atividades, avaliação de desempenho e monitoramento de prazos. Total autonomia sobre o
+                que ocorre no setor.</p>
             </div>
           </div>
-          <!-- Nível Colaborador -->
           <div class="d-flex align-items-start">
-            <i class="bi bi-person-workspace"></i> <!-- Ícone -->
+            <i class="bi bi-person-workspace"></i>
             <div>
               <p class="level-title">Colaborador</p>
-              <p>Visualização e execução de todas as suas tarefas e pontos de atenção. Um guia prático para uma rotina
+              <p class="level-description">Visualização e realização de todas as suas atividades e pontos de atenção. Um guia prático para uma rotina
                 mais ágil e produtiva.</p>
             </div>
           </div>
@@ -357,9 +219,8 @@
       </div>
     </div>
   </section>
-  <!-- Modal exclusivo para o col-lg-2 (menor) -->
   <div class="modal fade" id="imageModalSmall" tabindex="-1" aria-labelledby="imageModalSmallLabel" aria-hidden="true">
-    <div class="modal-dialog modal-l modal-dialog-centered"> <!-- modal-lg para modal de tamanho menor -->
+    <div class="modal-dialog modal-l modal-dialog-centered"> 
       <div class="modal-content modal-custom">
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -371,9 +232,8 @@
     </div>
   </div>
 
-  <!-- Modal para col-lg-5 (maior) -->
   <div class="modal fade" id="imageModalLarge" tabindex="-1" aria-labelledby="imageModalLargeLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered"> <!-- modal-xl para modal maior -->
+    <div class="modal-dialog modal-xl modal-dialog-centered"> 
       <div class="modal-content modal-custom">
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -385,96 +245,97 @@
     </div>
   </div>
 
-  <!-- Seção de Atendimento -->
-  <section class="atendimento-section">
+  <section class="atendimento-section" id="atendimento">
     <div class="container">
-      <h2>Tenha o melhor atendimento do mercado</h2>
-      <p>O aplicativo vai tornar sua interação com o cliente mais simples e muito mais eficiente.</p>
-      <!-- Cards de Atendimento -->
-      <div class="row text-center">
-        <!-- Card 1 (Aumentado) -->
-        <div class="col-lg-5">
-          <div class="atendimento-card">
-            <img src="assets/ajuda.jpg" alt="atendimento" class="clickable-image-large" data-bs-toggle="modal"
-              data-bs-target="#imageModalLarge">
-            <h4>Suporte de Qualidade!</h4>
-            <p>Precisando de Ajuda? Envie sua demanda para nossa equipe!</p>
-          </div>
-        </div>
-        <!-- Card 2 (Aumentado) -->
-        <div class="col-lg-5">
-          <div class="atendimento-card">
-            <img src="assets/mrbeast.png" alt="sistema" class="clickable-image-large" data-bs-toggle="modal"
-              data-bs-target="#imageModalLarge">
-            <h4>O nosso sistema.</h4>
-            <p>Seu escritório integrado com as ferramentas que melhor se adaptam à sua rotina.</p>
-          </div>
-        </div>
-        <!-- Card 3 (Diminuído com modal menor) -->
-        <div class="col-lg-2">
-          <div class="atendimento-card">
-            <img src="assets/mrbeast.png" alt="App com a sua cara" class="clickable-image-small"
-              data-bs-toggle="modal" data-bs-target="#imageModalSmall">
-            <h4>App com a sua cara</h4>
-            <p>Deixe o App RIBAS com a identidade do seu escritório e ofereça uma experiência de alto valor para
-              o cliente.</p>
+      <h2>Obtenha um suporte ágil e personalizado.</h2>
+<p>O aplicativo simplificará sua interação com o cliente, tornando-a muito mais eficaz.</p>
+<div class="row text-center">
+  <div class="col-lg-5">
+    <div class="atendimento-card fade-in-left">
+      <img src="assets/ajuda.webp" alt="ribashow_atendimento" class="clickable-image-large" data-bs-toggle="modal"
+        data-bs-target="#imageModalLarge">
+      <h4 class="mobile-title">Suporte de Excelência!</h4>
+      <p class="mobile-description">Precisa de Assistência? Envie sua solicitação para nossa equipe!</p>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="atendimento-card fade-in-up">
+      <img src="assets/sc2.webp" alt="ribashow_sistema" class="clickable-image-large" data-bs-toggle="modal"
+        data-bs-target="#imageModalLarge">
+      <h4 class="mobile-title">Nosso Software.</h4>
+      <p class="mobile-description">Seu escritório conectado com as ferramentas que melhor se ajustam à sua rotina.</p>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="atendimento-card fade-in-right">
+      <img src="assets/celularedit.webp" alt="App personalizado" class="clickable-image-small"
+        data-bs-toggle="modal" data-bs-target="#imageModalSmall">
+      <h4 class="mobile-title">App Mobile</h4>
+      <p class="mobile-description">Utilize nosso aplicativo para otimizar sua rotina e aumentar sua produtividade.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <script>
-    // Quando uma imagem da col-lg-5 for clicada para abrir o modal maior
-    document.querySelectorAll('.clickable-image-large').forEach(image => {
-      image.addEventListener('click', function () {
-        const src = this.src;
-        document.getElementById('modalImageLarge').src = src; // Defina a imagem no modal grande
-      });
-    });
 
-    // Quando uma imagem da col-lg-2 for clicada para abrir o modal menor
-    document.querySelectorAll('.clickable-image-small').forEach(image => {
-      image.addEventListener('click', function () {
-        const src = this.src;
-        document.getElementById('modalImageSmall').src = src; // Defina a imagem no modal pequeno
-      });
-    });
-  </script>
+<section class="como-atuamos-section" id="atuamos" style="background-image: url('assets/107032274-1647540069295-gettyimages-1084167640-2018_10_13-n1_office_0312.webp'); background-size: cover; background-position: center; padding: 50px 0;">
+  <div class="container">
+    <h2 class="section-title">Como Atuamos</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service-card fade-in-left">
+          <img src="assets/1.webp" alt="Novo Serviço 1" class="service-image">
+          <h3>O Negócio</h3>
+          <p>Descubra como nosso sistema de gestão de tarefas pode ajudar sua empresa a otimizar a execução de tarefas, permitindo um acompanhamento efetivo e em tempo real dos trabalhos programados e executados. Com recursos de integração, simplicidade e segurança, você pode contar com uma ferramenta poderosa para melhorar a produtividade e eficiência de sua equipe.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card fade-in-up">
+          <img src="assets/2.webp" alt="Novo Serviço 2" class="service-image">
+          <h3>Serviços</h3>
+          <p>Desenvolvemos sistemas de alta qualidade e performance, sob medida para atender as necessidades específicas do seu negócio. Conte com a nossa expertise em personalização de sistemas para ter uma solução única e exclusiva para a sua empresa. Oferecemos consultoria de sistemas para ajudá-lo a otimizar processos, identificar oportunidades de melhoria e alcançar resultados ainda melhores.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card fade-in-right">
+          <img src="assets/3.webp" alt="Novo Serviço 3" class="service-image">
+          <h3>A Solução</h3>
+          <p>Nosso sistema de projetos e gestão de tarefas permite a gestão em tempo real, possibilitando planejar, atribuir e monitorar tarefas de forma organizada, com visualização clara do andamento e status das atividades. Além disso, oferece recursos para criação de calendários, definição de prazos e geração de relatórios. Sua equipe terá a agilidade e eficiência necessárias para atingir os objetivos de forma estratégica e bem-sucedida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-  <!-- Seção de Depoimentos -->
-  <section class="testimonials-section" id="testimonials-section">
-    <div class="container"> <!-- Alterado para container-fluid para cobrir a largura total -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container fade-in-up">
       <h2>O que nossos clientes dizem sobre nós</h2>
       <div class="row">
-        <!-- Card 1 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
+          <div class="testimonial-card fade-in-left">
             <div class="stars">★★★★★</div>
-            <p>“A RIBAS transformou completamente a nossa gestão. O que antes exigia diversas ferramentas e controles
+            <p class="client-testimonial">“A ribashow transformou completamente a nossa gestão. O que antes exigia diversas ferramentas e controles
               externos, agora é feito de maneira centralizada e eficiente. Ganhamos agilidade, controle e inovação em
               nossos processos diários, tudo em um único sistema.”</p>
             <p class="client-name">Carlos Henrique Almeida</p>
             <p class="client-role">Consultor</p>
           </div>
         </div>
-        <!-- Card 2 -->
         <div class="col-md-4">
-          <div class="testimonial-card blue-card">
+          <div class="testimonial-card blue-card fade-in-down">
             <div class="stars">★★★★★</div>
-            <p>“Com a RIBAS, conseguimos otimizar nosso tempo e aumentar a produtividade. As tarefas que antes demandavam
+            <p class="client-testimonial">“Com a ribashow, conseguimos otimizar nosso tempo e aumentar a produtividade. As tarefas que antes demandavam
               várias ferramentas agora estão integradas em um só lugar. Isso trouxe uma nova dinâmica para nossa
               empresa, com mais foco e controle.”</p>
             <p class="client-name">Fernanda Souza Ramos</p>
             <p class="client-role">Contador - Contabilidade</p>
           </div>
         </div>
-        <!-- Card 3 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
+          <div class="testimonial-card fade-in-right">
             <div class="stars">★★★★★</div>
-            <p>“Antes da RIBAS, nossa equipe enfrentava dificuldades com a falta de integração entre sistemas. Hoje, todo
+            <p class="client-testimonial">“Antes da ribashow, nossa equipe enfrentava dificuldades com a falta de integração entre sistemas. Hoje, todo
               o nosso fluxo de trabalho é mais eficiente e organizado. A centralização dos processos nos permitiu uma
               gestão muito mais assertiva e produtiva.”</p>
             <p class="client-name">Lucas Pereira Fernandes</p>
@@ -483,33 +344,30 @@
         </div>
       </div>
       <div class="row">
-        <!-- Card 4 -->
         <div class="col-md-4">
-          <div class="testimonial-card blue-card">
+          <div class="testimonial-card blue-card fade-in-left">
             <div class="stars">★★★★★</div>
-            <p>“A RIBAS trouxe inovação e controle para nossa empresa. Conseguimos reduzir o tempo de execução das
+            <p class="client-testimonial">“A ribashow trouxe inovação e controle para nossa empresa. Conseguimos reduzir o tempo de execução das
               tarefas, acompanhar o progresso de cada projeto e tomar decisões com base em dados precisos. Um verdadeiro
               ganho de eficiência!”</p>
             <p class="client-name">Patrícia Gonçalves Araújo</p>
             <p class="client-role">Sub Assessor Contábil</p>
           </div>
         </div>
-        <!-- Card 5 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
+          <div class="testimonial-card fade-in-up">
             <div class="stars">★★★★★</div>
-            <p>“Utilizar a RIBAS foi um divisor de águas para nossa organização. O sistema centralizado nos ajudou a
+            <p class="client-testimonial">“Utilizar a ribashow foi um divisor de águas para nossa organização. O sistema centralizado nos ajudou a
               eliminar retrabalhos e melhorar a comunicação entre os setores. Agora, temos controle total sobre cada
               etapa do processo.”</p>
             <p class="client-name">Isabela Cristina Duarte</p>
             <p class="client-role">Consultor Contábil</p>
           </div>
         </div>
-        <!-- Card 6 -->
         <div class="col-md-4">
-          <div class="testimonial-card blue-card">
+          <div class="testimonial-card blue-card fade-in-right">
             <div class="stars">★★★★★</div>
-            <p>“Desde que implementamos a RIBAS, nossa equipe ganhou autonomia e controle. As soluções oferecidas pelo
+            <p class="client-testimonial">“Desde que implementamos a ribashow, nossa equipe ganhou autonomia e controle. As soluções oferecidas pelo
               sistema integraram nossos processos, trazendo mais agilidade, segurança e eficiência para o nosso dia a
               dia.”</p>
             <p class="client-name">Eduardo Moreira Silva</p>
@@ -519,77 +377,243 @@
       </div>
     </div>
   </section>
- <!-- Seção "Quer Saber Mais?" -->
-<section class="quer-saber-mais" style="background-image: url('assets/bg3.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
-  <div class="container text-center">
+<section class="quer-saber-mais fade-in-up" id=quer-saber-mais>
+  <div class="content text-center fade-in-left">
     <h2>Quer saber mais?</h2>
     <p>Entre em contato conosco para mais informações sobre nossos serviços e soluções.</p>
-    <a href="#" class="btn btn-light">Fale Conosco</a>
-  </div>
+    <button type="button" class="custom-btn btn-3" alt="WhatsApp" onclick="window.open('https://wa.me/558137710742', '_blank')">
+      <span>Fale Conosco</span>
+  </button>
+</div>
 </section>
 
-
-  <!-- Footer -->
-  <footer>
-    <div class="container" id="footer-container">
-      <div class="row text-center text-md-left">
-        <!-- Alinhamento central em telas pequenas e à esquerda em telas maiores -->
-        <!-- Seção da logo -->
-        <div class="col-md-4">
-          <div class="footer-logo">
-            <img src="assets/mrbeast.png" alt="Logo RIBAS">
-          </div>
-        </div>
-        <!-- Contato, Endereço e Telefone -->
-        <div class="col-md-3">
-          <h5>Contato</h5>
-          <ul class="footer-contact">
-            <!-- Email -->
-            <li>
-              <i class="bi bi-envelope"></i>
-              <a href="mailto:contato@RIBAS.com.br">contato@RIBAS.com.br</a>
-            
-            <li>
-              <i class="bi bi-telephone"></i>
-              <a href="tel:+">+55 (81) 1234-5678</a>
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Redes Sociais -->
-        <div class="col-md-4">
-          <h5>Redes Sociais</h5>
-          <div class="footer-social-icons">
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=h40k4ZHU8IxG8wj3"
-              target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=h40k4ZHU8IxG8wj3" target="_blank"><i
-                class="bi bi-instagram"></i></a>
-                <a href="https://youtu.be/dQw4w9WgXcQ?si=h40k4ZHU8IxG8wj3" target="_blank"><i
-                class="bi bi-twitter"></i></a>
-                <a href="https://youtu.be/dQw4w9WgXcQ?si=h40k4ZHU8IxG8wj3" target="_blank"><i
-                class="bi bi-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/ailton-guilherme/" target="_blank"><i
-                class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <!-- Botão de Ação -->
-        <div class="col-md-4">
-          <a href="#" class="action-button">Quero ver a RIBAS em ação</a>
+<footer id="footer-container">
+  <div class="container">
+    <div class="row text-center text-md-left">
+      <div class="col-md-4">
+        <div class="footer-logo">
+          <img src="assets/tec.png" alt="Logo ribashow" class="footer-logo-img">
         </div>
       </div>
-    </div>
 
-    <!-- Seção de direitos reservados -->
-    <div class="footer-bottom">
-      <p>© 2024 RIBAS | Todos os direitos reservados</p>
-    </div>
-  </footer>
+      <div class="col-md-4">
+        <h5></h5>
+        <div class="footer-contact">
+          <div>
+            <i class="bi bi-envelope"></i>
+            <a href="mailto:contato@ribashow.com.br">contato@ribashow.com.br</a>
+          </div>
+          <div>
+            <i class="bi bi-geo-alt"></i>
+            <a href="https://maps.app.goo.gl" target="_blank" style="white-space: nowrap">Rua Teste do Teste - Bairro - Recife/PE</a>
+          </div>
+          <div>
+            <i class="bi bi-telephone"></i>
+            <a href="tel:">+55 (81) 1234-5678</a>
+          </div>
+        </div>
+      </div>
+      
+<div class="col-md-4">
+  <h5></h5>
+  <div style="margin-left: 100px;" class="footer-social-icons">
+    <a meta="Facebook" href="https://www.facebook.com" target="_blank" aria-label="Siga-nos no Facebook">
+      <i class="bi bi-facebook"></i></a>
+    <a meta="Instagram" href="https://www.instagram.com" target="_blank" aria-label="Siga-nos no Instagram">
+      <i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="Siga-nos no LinkedIn">
+      <i meta="Linkedin" class="bi bi-linkedin"></i></a>
+  </div>
+</div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <div class="footer-bottom">
+  <p>© 2024 ribashow | Todos os direitos reservados</p>
+    <a href="politica-privacidade.html" class="policy-link">Política de Privacidade</a>
+  </div>
+
+
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>  
+
+  <script>
+    function scrollToPosition(position) {
+      window.scrollTo({
+          top: position,
+          behavior: 'smooth'
+      });
+  }
+  
+  
+
+  function updateActiveSection() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    const sections = [
+        { top: 0, bottom: 500, index: 0 },  
+        { top: 500, bottom: 1100, index: 1 }, 
+        { top: 1100, bottom: 1700, index: 2 }, 
+        { top: 1700, bottom: 2450, index: 3 }, 
+        { top: 2450, bottom: 3200, index: 4 }, 
+        { top: 3200, bottom: 4000, index: 5 }, 
+        { top: 4000, bottom: document.body.scrollHeight, index: 6 },
+    ];
+
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    if (scrollPosition < 500) {
+        navLinks[0].classList.add('active');
+    } else {
+        sections.forEach(section => {
+            if (scrollPosition >= section.top && scrollPosition < section.bottom) {
+                navLinks[section.index].classList.add('active');
+            }
+        });
+    }
+}
+
+window.addEventListener('load', updateActiveSection);
+window.addEventListener('scroll', updateActiveSection);
+  
+  document.querySelectorAll('.feature-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const target = document.querySelector(targetId);
+      const newImg = this.getAttribute('data-img');
+
+      document.querySelectorAll('.collapse').forEach(collapse => {
+        if (collapse !== target) {
+          collapse.classList.remove('show'); 
+        }
+      });
+
+      target.classList.toggle('show');
+
+      document.getElementById('mainImage').src = newImg; 
+    });
+  });
+
+  document.querySelectorAll('.clickable-image').forEach(image => {
+    image.addEventListener('click', function () {
+      const src = this.src;
+      document.getElementById('modalImage').src = src;
+    });
+  });
+  // fade in 
+  document.addEventListener("DOMContentLoaded", function() {
+    const fadeElements = document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-up, .fade-in-down');
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1 
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    fadeElements.forEach(element => {
+      observer.observe(element); 
+    });
+  });
+     document.querySelectorAll('.clickable-image-large').forEach(image => {
+      image.addEventListener('click', function () {
+        const src = this.src;
+        document.getElementById('modalImageLarge').src = src; 
+      });
+    });
+    document.querySelectorAll('.clickable-image-small').forEach(image => {
+      image.addEventListener('click', function () {
+        const src = this.src;
+        document.getElementById('modalImageSmall').src = src; 
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!localStorage.getItem("cookiesAccepted") && !localStorage.getItem("cookiesRejected")) {
+        document.getElementById("cookieConsent").style.display = "block";
+      } else if (localStorage.getItem("cookiesRejected")) {
+        document.getElementById("cookieRejectionMessage").style.display = "block";
+        disableTrackingCookies(); 
+      }
+    
+      document.getElementById("acceptCookies").addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true"); 
+        document.getElementById("cookieConsent").style.display = "none"; 
+      });
+    
+      document.getElementById("rejectCookies").addEventListener("click", function () {
+        localStorage.setItem("cookiesRejected", "true"); 
+        document.getElementById("cookieConsent").style.display = "none"; 
+        document.getElementById("cookieRejectionMessage").style.display = "block"; 
+        disableTrackingCookies(); 
+      });
+    });
+    
+    function disableTrackingCookies() {
+      console.log("Funcionalidades que dependem de cookies estão desativadas.");
+    };
+
+    
+    function countUp(element, target, duration) {
+      let start = 0;
+      const end = parseInt(target);
+      const range = end - start;
+      const increment = end > 0 ? Math.ceil(range / duration) : Math.floor(range / duration);
+      
+      const step = () => {
+        start += increment;
+        if ((increment > 0 && start >= end) || (increment < 0 && start <= end)) {
+          start = end;
+        }
+        element.textContent = start.toLocaleString(); 
+        if (start < end) {
+          requestAnimationFrame(step);
+        }
+      };
+      
+      requestAnimationFrame(step);
+    }
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      countUp(document.getElementById('clientsProcessed'), '2000', 200);
+      countUp(document.getElementById('tasksCompleted'), '2000000', 200); 
+      countUp(document.getElementById('improvementsYearly'), '350', 200); 
+      countUp(document.getElementById('automatedTasks'), '2500', 200); 
+    });
+    function scrollToPosition(pixel) {
+      window.scrollTo({
+        top: pixel,
+        behavior: 'smooth'
+      });
+    }
+
+    window.addEventListener('orientationchange', function() {
+      document.body.classList.toggle('refresh');
+  });
+  
+    
+  </script>
+  
+  <div id="cookieConsent" class="cookie-consent">
+    <p>Este site usa cookies para garantir que você tenha a melhor experiência em nosso site. 
+       <a href="politica-privacidade.html" target="_blank">Nossa política de privacidade.</a></p>
+    <button id="acceptCookies" class="btn-4"><span>Aceitar</span></button>
+    <button id="rejectCookies" class="btn-4"><span>Rejeitar</span></button>
+</div>
+  <div id="cookieRejectionMessage" class="cookie-rejection-message" style="display: none;">
+  </div>
+  
 </body>
 
 </html>
